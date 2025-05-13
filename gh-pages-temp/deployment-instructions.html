@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Pages Deployment</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .steps { background-color: #f5f5f5; padding: 20px; border-radius: 5px; }
+        h1 { color: #333; }
+        h2 { color: #0066cc; }
+        code { background-color: #f0f0f0; padding: 2px 5px; border-radius: 3px; }
+        .highlight { background-color: #ffd; padding: 10px; border-left: 4px solid #fc0; margin: 15px 0; }
+    </style>
+</head>
+<body>
+    <h1>Manual GitHub Pages Deployment Instructions</h1>
+    
+    <div class="highlight">
+        <p>Your Fitness Tracker app build is ready for GitHub Pages! Follow these steps to deploy it:</p>
+    </div>
+    
+    <div class="steps">
+        <h2>Steps to deploy:</h2>
+        <ol>
+            <li>Go to your GitHub repository: <code>https://github.com/RobbyG57/fitness-tracker</code></li>
+            <li>Click on "Settings" (top navigation bar)</li>
+            <li>Scroll down to "GitHub Pages" section under "Code and automation" in the sidebar</li>
+            <li>Under "Source", select "Deploy from a branch"</li>
+            <li>Create a new branch called <code>gh-pages</code></li>
+            <li>In the dropdown, select this new <code>gh-pages</code> branch and click "Save"</li>
+            <li>Upload all files from the <code>gh-pages-temp</code> folder in your project to this branch:
+                <ul>
+                    <li>You can do this by clicking "Add file" > "Upload files" on the gh-pages branch page</li>
+                    <li>Drag and drop all files from the <code>gh-pages-temp</code> folder</li>
+                    <li>Click "Commit changes"</li>
+                </ul>
+            </li>
+            <li>Wait a few minutes for GitHub to build your site</li>
+            <li>Visit <code>https://RobbyG57.github.io/fitness-tracker</code> to see your deployed app!</li>
+        </ol>
+    </div>
+    
+    <p><strong>Special Note:</strong> Make sure both <code>index.html</code> and <code>404.html</code> files are in the root of your gh-pages branch. This is critical for proper SPA routing!</p>
+    
+    <p><strong>Note:</strong> For future updates, you'll need to rebuild your app with <code>npm run build</code> and repeat this process.</p>
+</body>
+</html>
